@@ -24,6 +24,7 @@ Namespace Controllers
                     products = ctx.Product.Where(Function(p) p.PartNumber = value).ToList()
                 End If
 
+
                 Return products
             End Using
 
