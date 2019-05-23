@@ -15,5 +15,11 @@ Public Module WebApiConfig
             routeTemplate:="api/{controller}/{id}",
             defaults:=New With {.id = RouteParameter.Optional}
         )
+
+        GlobalConfiguration.Configuration.Formatters.JsonFormatter.MediaTypeMappings.Add(New System.Net.Http.Formatting.RequestHeaderMapping("Accept",
+                                     "text/html",
+                                     StringComparison.InvariantCultureIgnoreCase,
+                                     True,
+                                     "application/json"))
     End Sub
 End Module
