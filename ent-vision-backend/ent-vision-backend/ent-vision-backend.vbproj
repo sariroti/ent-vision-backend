@@ -163,6 +163,7 @@
     <Compile Include="App_Start\FilterConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="App_Start\WebApiConfig.vb" />
+    <Compile Include="Controllers\OrdersController.vb" />
     <Compile Include="Controllers\ProductsController.vb" />
     <Compile Include="Db\Configuration\Order.vb" />
     <Compile Include="Db\EntVisionContext.vb" />
