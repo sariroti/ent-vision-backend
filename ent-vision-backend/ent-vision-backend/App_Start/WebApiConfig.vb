@@ -9,12 +9,13 @@ Public Module WebApiConfig
 
         ' Web API routes
         config.MapHttpAttributeRoutes()
-
+        config.EnableCors()
         config.Routes.MapHttpRoute(
             name:="DefaultApi",
             routeTemplate:="api/{controller}/{id}",
             defaults:=New With {.id = RouteParameter.Optional}
         )
+
 
         GlobalConfiguration.Configuration.Formatters.JsonFormatter.MediaTypeMappings.Add(New System.Net.Http.Formatting.RequestHeaderMapping("Accept",
                                      "text/html",

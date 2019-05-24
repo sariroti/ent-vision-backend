@@ -1,7 +1,9 @@
 ﻿Imports System.Net
 Imports System.Web.Http
+Imports System.Web.Http.Cors
 
 Namespace Controllers
+    <EnableCors("http://localhost:4200", "*", "*")>
     Public Class OrdersController
         Inherits ApiController
 
