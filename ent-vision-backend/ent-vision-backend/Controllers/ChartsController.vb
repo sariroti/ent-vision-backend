@@ -1,10 +1,11 @@
 ﻿Imports System.Net
 Imports System.Web.Http
+Imports System.Web.Http.Cors
 
 Namespace Controllers
     Public Class ChartsController
         Inherits ApiController
-
+        <EnableCors("http://localhost:4200", "*", "*")>
         <Route("api/charts/GetProductTotalByCategories")>
         Public Function GetProductTotalByCategories() As IEnumerable(Of Model.GoogleLineChart)
             Using ctx As EntVisionContext = New EntVisionContext()
@@ -16,9 +17,7 @@ Namespace Controllers
 
                 For Each q In query
                     Dim googleLineChart As Model.GoogleLineChart = New Model.GoogleLineChart()
-                    googleLineChart.Rows = New List(Of String)
-                    googleLineChart.Rows.Add(q.CategoryName)
-                    googleLineChart.Rows.Add(q.Count)
+                    googleLineChart.Rows = Tuple.Create(q.CategoryName, q.Count)
 
                     googleLineChartList.Add(googleLineChart)
                 Next
