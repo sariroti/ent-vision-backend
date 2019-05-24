@@ -1,4 +1,5 @@
 # ent-vision-backend
+using EF6 Code First
 
 ## API
 ### Product
@@ -45,5 +46,13 @@ request body example :
 ```
 GET
 /api/charts/GetProductTotalByCategories
+```
+
+### command line after cloning to generate migrations and create db in your local
+
+```
+Enable-Migrations
+Add-Migration
+Update-Database
 ```
 
