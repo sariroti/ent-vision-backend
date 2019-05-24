@@ -163,11 +163,13 @@
     <Compile Include="App_Start\FilterConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="App_Start\WebApiConfig.vb" />
+    <Compile Include="Controllers\ChartsController.vb" />
     <Compile Include="Controllers\OrdersController.vb" />
     <Compile Include="Controllers\ProductsController.vb" />
     <Compile Include="Db\Configuration\Order.vb" />
     <Compile Include="Db\EntVisionContext.vb" />
     <Compile Include="Db\Model\Order.vb" />
+    <Compile Include="Db\Model\Chart.vb" />
     <Compile Include="Db\Model\OrderDetail.vb" />
     <Compile Include="Db\Model\Product.vb" />
     <Compile Include="Global.asax.vb">
