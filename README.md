@@ -41,3 +41,9 @@ request body example :
 ```
 
 ### Chart 
+
+```
+GET
+/api/charts/GetProductTotalByCategories
+```
+
